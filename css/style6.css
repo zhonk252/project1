@@ -1,0 +1,301 @@
+@font-face {
+  font-family: 'arial_blackregular';
+  src: url('../font/arial-black-webfont.woff2') format('woff2'),
+       url('../font/arial-black-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+html{
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  color:black;
+  background:linear-gradient(180deg, #0B0B0B 0%, #FFFFFF 100%), rgba(0, 0, 0, 0.9);
+  background-size:cover;
+  overflow: hidden;
+}
+
+body{
+  min-height: 100vh;
+}
+
+p{
+  margin:0;
+  padding:0;
+}
+
+.author{
+text-align: center;
+text-indent: 0;
+}
+
+.dropbtn {
+font-family: arial_blackregular, helvetica;
+background-color:antiquewhite;
+color:black;
+padding: 16px;
+font-size: 16px;
+border: none;
+cursor: pointer;
+}
+
+.dropdown {
+position: relative;
+display:none;
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+right: 0;
+background-color: #f9f9f9;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+}
+
+.dropdown-content a {
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+}
+
+.dropdown-content a:hover {background-color: gray;}
+
+.dropdown:hover .dropdown-content {
+display: block;
+}
+
+.dropdown:hover .dropbtn {
+background-color:gray;
+}
+
+
+
+.father {
+color: black;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+
+h1{
+font-family: arial_blackregular, helvetica;
+font-size: 2.5rem;
+margin:0;
+padding-top:2.5rem;
+text-align: center;
+color: gray;
+opacity: 0.8;
+transform: perspective(50em) rotateX(50deg);
+}   
+
+.navigation{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: arial_blackregular, helvetica;
+  font-size: 1rem;
+  color:gray;
+}
+
+.words{
+  padding:1rem;
+  text-shadow: 2px 2px #0B0B0B;
+}
+
+.title{
+font-family: arial_blackregular, helvetica;
+font-size: 1rem;
+color:black;
+opacity: 0;
+text-align: center;
+}
+
+.mainbox{
+display: flex;
+justify-content: center;
+}
+
+#textbox{
+font-family: arial_blackregular, helvetica;
+width:60vw;
+height: 250px;
+font-size:1rem;
+text-indent: 3rem;
+text-align:left;
+overflow: auto;
+filter: blur(4px);
+}
+
+#target{ 
+font-family: arial_blackregular, helvetica;
+position:absolute;
+top:300px;
+bottom:0;
+left:0;
+right:0;
+font-size:2rem; 
+text-align:left;
+text-indent: 3rem;
+overflow: scroll;
+filter: blur(4px);
+}
+
+::-webkit-scrollbar {
+width: 1px;
+opacity: 0;
+}
+
+::-webkit-scrollbar-track {
+opacity: 0;
+}
+ 
+
+::-webkit-scrollbar-thumb {
+opacity: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+opacity: 0;
+}
+
+#target:hover{
+filter: blur(0px);
+}
+
+#target>div{
+padding-top:-40px;
+}
+
+
+.perspective{
+position:absolute;
+top:0;
+bottom:0;
+left:0;
+right:0;
+transform-origin:50% 100% ;
+transform: perspective(330px) rotateX(20deg);
+}
+
+a{
+color:rgb(223, 223, 223);
+text-decoration: none;
+}
+
+.navigation a{
+color:gray;
+}
+
+.navigation a:visited{
+color:black;
+}
+
+.links {
+color:black;
+filter: blur(3px);
+background-color: rgb(128, 128, 128);
+}
+
+.links:hover{
+filter: none;
+background-color: antiquewhite;
+}
+
+
+.HL{
+color:black;
+text-decoration: underline;
+filter: blur(3px);
+background-color: rgb(128, 128, 128);
+
+}
+
+
+@media screen and (max-width:480px){
+.dropdown1{
+  display: none;
+}
+.topbar{
+  padding-bottom: 1rem;
+}
+.title{
+  padding-bottom: 2rem;
+  opacity: 1;
+}
+h1{
+  font-size:1rem;
+  opacity: 1;
+  transform: none;
+  padding-left: 4rem;
+  padding-top: 1rem;
+}
+
+.father{
+  background-color: rgb(145, 145, 145);
+  text-align: center;
+  justify-content: space-between;
+  width:90vw;
+  opacity: 0.6;
+  }
+  .topbar{
+    display: flex;
+    justify-content: space-between;
+  }
+  #target{
+     top:380px;
+     font-size: 1.5rem;
+  }
+  .navigation{
+    display:none;
+  }
+  .searchbar{
+    font-size: 10px;
+  }
+  .topnav input[type=text]{
+    display: none;
+  }
+  .dropdown {
+    position: relative;
+    display:inline-block;
+  }
+  .topnav p {
+   display: none;
+  }
+}
+
+
+
+
+@media screen and (min-width:300px){
+h1{
+  font-size:1rem;
+  opacity: 1;
+  transform: none;
+  padding-left: 1rem;
+  padding-top: 1rem;
+}
+}
+
+@media screen and (max-height:900px){
+  #target{
+    top:350px;
+  }
+
+  h1{
+    font-size:0.5rem;
+    opacity: 1;
+    transform: none;
+    padding-left: 1rem;
+    padding-top: 1rem;
+  }
+}
+
+
+
+
+
